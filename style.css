@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    background: linear-gradient(to right, #000000, #800080);
+    background-size: cover;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .social-icons {
+    display: flex;
+    align-items: center;
+}
+
+nav .social-icons a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav .social-icons a:hover {
+    color: #1da1f2; /* Twitter blue */
+}
+
+nav .social-icons a:nth-child(2):hover {
+    color: #e1306c; /* Instagram pink */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 100px; /* Add padding to avoid content being hidden behind the navbar */
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 100px); /* Full height minus navbar height */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.home-content {
+    color: #fff;
+    background: linear-gradient(to right, #1a1a1a, #660066);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.home-content h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.home-content p {
+    margin: 10px 0 0;
+    text-align: justify;
+}
+
+.game-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: linear-gradient(to right, #1a1a1a, #660066);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    margin: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Default card width for larger screens */
+.card {
+    width: 48%;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card h2 {
+    color: #fff;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    color: #ddd;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: justify; /* Justify text */
+}
+
+aside .creator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+aside .creator img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+aside .creator p {
+    margin: 0;
+    text-align: justify; /* Justify text */
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.footer-content .socials {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content .socials li {
+    margin: 0 10px;
+}
+
+.footer-content .socials li a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); /* Make icons white */
+    transition: filter 0.3s;
+}
+
+.footer-content .socials li a img:hover {
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(200deg); /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+    }
+
+    .game-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    aside.card {
+        order: 1; /* Move aside to the bottom */
+    }
+
+    .home-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        margin: 0 0 20px 0;
+    }
+}
